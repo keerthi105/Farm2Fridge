@@ -1,0 +1,57 @@
+<div class="modal" id="checkoutModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3>Checkout</h3>
+<button class="close-modal" onclick="closeModal('checkoutModal')">×</button>
+</div>
+<form onsubmit="handleCheckout(event)">
+<div class="form-group">
+<label>Delivery Address</label>
+<textarea placeholder="Enter your delivery address" required="" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label>Delivery Date</label>
+<input required="" type="date"/>
+</div>
+<div class="form-group">
+<label>Delivery Time Slot</label>
+<div class="delivery-slots">
+<div class="slot-btn active" onclick="selectSlot(this)">6:30 - 8:30 AM</div>
+<div class="slot-btn" onclick="selectSlot(this)">7:30 - 9:00 PM</div>
+</div>
+</div>
+<div class="form-group">
+<label>Subscription Options</label>
+<div class="subscription-options">
+<div class="subscription-btn active" onclick="selectSubscription(this, 'one-time')">One Time</div>
+<div class="subscription-btn" onclick="selectSubscription(this, 'daily')">Daily</div>
+<div class="subscription-btn" onclick="selectSubscription(this, 'weekly')">Weekly</div>
+<div class="subscription-btn" onclick="selectSubscription(this, 'monthly')">Monthly</div>
+</div>
+</div>
+<div class="form-group">
+<label>Payment Method</label>
+<select onchange="handlePaymentChange(this.value)" required="">
+<option value="">Select Payment Method</option>
+<option value="upi">UPI</option>
+<option value="cod">Cash on Delivery</option>
+</select>
+</div>
+<div class="form-group" id="upiSection" style="display: none;">
+<label>UPI Payment</label>
+<div style="text-align: center; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 10px;">
+<p style="margin-bottom: 1rem; color: #2E7D32; font-weight: 600;">Scan QR Code to Pay</p>
+<div style="width: 200px; height: 200px; margin: 0 auto; background: white; border: 2px solid #4CAF50; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                            📱
+                        </div>
+<p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">UPI ID: farm2fridge@upi</p>
+</div>
+</div>
+<div class="form-group">
+<label>Special Instructions</label>
+<textarea placeholder="Any special delivery instructions" rows="2"></textarea>
+</div>
+<button class="btn btn-primary" style="width: 100%;" type="submit">Place Order</button>
+</form>
+</div>
+</div>

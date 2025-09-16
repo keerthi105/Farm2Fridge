@@ -1,0 +1,24 @@
+<header class="header">
+<nav class="nav-container">
+<div style="display: flex; align-items: center; gap: 1rem;">
+<div class="logo-container">
+<div class="logo-content" id="logoContent">
+<img alt="Farm2Fridge Logo" src="images/logo.png"/>
+</div>
+</div>
+<h2 style="color: #2E7D32; font-size: 1.8rem; font-weight: bold; margin: 0;">Farm2Fridge</h2>
+</div>
+<!-- Hamburger toggle -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<!-- Navigation Menu -->
+<ul class="nav-menu" id="navMenu">
+<li><a class="active" href="#home" onclick="showHomePage()">Home</a></li>
+<li><a href="#products" onclick="showProductsPage()">Products</a></li>
+<li><a href="#cart" onclick="showCartPage()">Cart</a></li>
+<li><a href="#about" onclick="showAboutSection()">About</a></li>
+<li><a href="#contact" onclick="showContactSection()">Contact</a></li>
+<li><a href="#login" id="loginNavBtn" onclick="showLoginModal()">Login</a></li>
+<li><a href="#profile" id="userNavBtn" onclick="showUserProfile()" style="display: none;">Welcome, User</a></li>
+</ul>
+</nav>
+</header>
